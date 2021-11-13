@@ -77,38 +77,36 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav__link {
 	/*padding: 10px 30px; */
-	margin: 40px;
+	margin-left: 50px;
 	position: relative;
-	
-	font-size: 14px;
+
+	font-size: 15px;
 	color: #2B2A2C;
 	text-transform: uppercase;
 	font-weight: 700;
 	text-decoration: none;
 
-	/*border: 2px solid transparent;
-	border-radius: 20px;*/
+	/*border: 2px solid transparent;*/
+	border-radius: 20px;
 }
 
-/*.nav__link:hover {
-	border-color: #2B2A2C;
-}*/
 
 .nav__link:after {
 	content: "";
-	display: block;
-	width: 100%;
+	width: 0;
 	height: 2px;
 	background-color: #2B2A2C;
 
 	position: absolute;
-	bottom: -5;
+	bottom: -5px;
 	left: 0;
-	z-index: 1; 
+	z-index: 1;
+
+	transition: width .2s linear;
 }
 
-.intro {
-
+.nav__link:hover:after {
+	width: 100%;
 }
 
 .intro__inner {
